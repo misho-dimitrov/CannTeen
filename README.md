@@ -14,7 +14,7 @@ The upstream imaging preprocessing steps (MRS voxel segmentation in MATLAB and a
 
 `CannTeen_Analysis.R` requires R with the packages listed at the top of the file (e.g. `lmerTest`, `emmeans`, `ptestr`).
 
-[Voxel_Check_env.yml](Voxel_Check_env.yml) is a conda environment file kept for reference; it supports the local (unpublished) Python voxel-position/density check step and is not required to run `CannTeen_Analysis.R`.
+A conda environment file supporting the local (unpublished) Python voxel-position/density check step is kept locally but is not required to run `CannTeen_Analysis.R` and is not published here.
 
 ## Data
 

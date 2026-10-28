@@ -7,3 +7,4 @@ __pycache__/
 # Imaging preprocessing scripts kept local only (not published)
 1_MRS_Segmentation.m
 2_MRS_Voxel_Position_Check.py
+Voxel_Check_env.yml
