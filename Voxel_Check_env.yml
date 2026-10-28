@@ -1,0 +1,10 @@
+name: Voxel_Check_env
+channels:
+  - defaults
+dependencies:
+  - nibabel
+  - nilearn
+  - matplotlib
+  - numpy
+  - pandas
+
