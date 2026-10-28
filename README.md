@@ -1,6 +1,6 @@
 # CannTeen: The acute effects of cannabis with and without cannabidiol in adults and adolescents
 
-Analysis pipeline for an investigation of MRS (magnetic resonance spectroscopy) outcomes in adults and adolescents under acute THC and THC+CBD administration, part of the ([**CannTeen** study](https://onlinelibrary.wiley.com/doi/full/10.1111/add.16154)).
+Analysis pipeline for an investigation of MRS (magnetic resonance spectroscopy) outcomes in adults and adolescents under acute THC and THC+CBD administration, part of the [**CannTeen** study](https://onlinelibrary.wiley.com/doi/full/10.1111/add.16154).
 
 ## Pipeline
 
