@@ -23,7 +23,7 @@ df = pd.read_csv(tsv_path, sep='\t')
 # Ensure participant IDs are strings and zero-padded to 6 digits
 df['participant'] = df['participant'].astype(str).str.zfill(6)
 
-# Construct full session label (e.g., 016001_V1)
+# Construct full session label (e.g., 000001_V1)
 df['participant_session'] = df['participant'] + '_' + df['session'].astype(str)
 
 # Define group names

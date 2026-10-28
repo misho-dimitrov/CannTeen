@@ -30,7 +30,7 @@ library(patchwork)
 df1 <- read_sav("~/Postdoc/CannTeen/Misho_Acute_Baseline_cleaned_v2.4_10.5.22.sav")
 df2 <- read_excel("~/Postdoc/CannTeen/Cannteen_Teenagers_Values.xlsx", skip = 1)
 df3 <- read_excel("~/Postdoc/CannTeen/Cannteen_Adults_Values.xlsx", skip = 1)
-df_drugs <- read_excel("~/Postdoc/CannTeen/CannTeen_acute_visits_for_Uzma_updated.xlsx")
+df_drugs <- read_excel("~/Postdoc/CannTeen/CannTeen_acute_visits_updated.xlsx")  # NOTE: filename shown is a placeholder; rename/point to your local file
 df_other <- read_sav("~/Postdoc/CannTeen/Misho_Invicro123_final_v1.17_Dec22.sav")
 
 # Convert drug df from wide to long format
@@ -39,11 +39,11 @@ df_drugs_long <- df_drugs %>%
   transmute(Sub, Visit = as.integer(gsub("\\D", "", Visit)), condition = value)
 
 # Remove rows from drug df that will be missing from the merged df
-# These are:
-# 16018: no V3
-# 16025: no V2
-# 26023: no V1
-# 26027: no V3
+# These are (participant IDs redacted for the public repo):
+# <ID_1>: no V3
+# <ID_2>: no V2
+# <ID_3>: no V1
+# <ID_4>: no V3
 df_drugs_long <- df_drugs_long[-c(45, 65, 130, 144), ]
 
 # Prep df's for merging
@@ -164,9 +164,11 @@ points(top_idx, cooks[top_idx], col = "blue", pch = 19)
 text(top_idx, cooks[top_idx], labels = paste0(subj_labels[top_idx], " (", top_idx, ")"),
   pos = 3, cex = 0.7, col = "blue")
 
-# REMOVE only the THC condition for ID 16021 and refit model
+# REMOVE only the THC condition for a specific outlier participant and refit model
+# NOTE: actual participant ID redacted for the public repo; replace placeholder below with the real ID locally
+excluded_subject_id <- "<REDACTED_PARTICIPANT_ID>"
 merged_df_clean_final <- merged_df_clean %>%
-  dplyr::filter(!(Sub == 16021 & condition == "THC"))
+  dplyr::filter(!(Sub == excluded_subject_id & condition == "THC"))
 
 # Run LME again
 lme_model <- lmer(Glx_adjusted ~ condition * AgeGroup + (1|Participant_ID), data = merged_df_clean_final)

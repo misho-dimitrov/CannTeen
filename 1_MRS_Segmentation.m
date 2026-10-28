@@ -4,7 +4,7 @@ setenv('FSLDIR', '/software/system/fsl/6.0.7.17');
 setenv('FSLOUTPUTTYPE', 'NIFTI_GZ'); 
 setenv('PATH', [getenv('PATH') ':/software/system/fsl/6.0.7.17/share/fsl/bin']);
 
-addpath(genpath('/software/local/spgtdjl/MATLAB/Gannet3.1-master'));
+addpath(genpath('/software/local/<username>/MATLAB/Gannet3.1-master'));
 addpath /data/project/CannTeen/Scripts;
 
 voxsegment_striatum=nan(24,4);
@@ -13,16 +13,17 @@ voxsegment_striatum=nan(24,4);
 dirMRS =  '/data/project/CannTeen/data/Teenagers/';  
 %dirMRS =  '/data/project/CannTeen/data/Adults/';  
 
-% list of subjects to loop across 
-subjects = [016002 016124 016018 016009 016004 016016 016008 016019 016003 016106 016020 016025 016007 016017 016010 016126 016011 016605 016123 016001 016022 016021 016012 016027]; 
-%subjects = [026017 026124 026006 026108 026003 026125 026019 026001 026009 026122 026104 026027 026323 026026 026010 026011 026221 026018 026005 026016 026002 026007 026020 026012];
+% list of subjects to loop across
+% NOTE: actual participant IDs redacted for the public repo; placeholders shown below, replace with the real subject ID list locally
+subjects = [000001 000002 000003 000004 000005 000006 000007 000008 000009 000010 000011 000012 000013 000014 000015 000016 000017 000018 000019 000020 000021 000022 000023 000024]; 
+%subjects = [000001 000002 000003 000004 000005 000006 000007 000008 000009 000010 000011 000012 000013 000014 000015 000016 000017 000018 000019 000020 000021 000022 000023 000024];
 
 for i = 1:length(subjects) % i == index
     
     try 
         name_num = subjects(i);
         name = sprintf('%06d', name_num);  % formats the number as a 6-digit string with leading zeros
-        subjdir = fullfile(dirMRS, name, 'V3');  % e.g., /.../016027/V1
+        subjdir = fullfile(dirMRS, name, 'V3');  % e.g., /.../000001/V1
         cd(subjdir); % move into subject dir     
      
                 %% Main function you want to run:     
