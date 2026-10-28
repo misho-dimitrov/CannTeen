@@ -1,20 +1,12 @@
-# CannTeen
+# CannTeen: The acute effects of cannabis with and without cannabidiol in adults and adolescents
 
-Analysis pipeline for the **CannTeen** study, investigating MRS (magnetic resonance spectroscopy) outcomes in adolescents and adults under acute THC and THC+CBD administration.
+Analysis pipeline for an investigation of MRS (magnetic resonance spectroscopy) outcomes in adults and adolescents under acute THC and THC+CBD administration, part of the **CannTeen** study ([https://osf.io/jg9qp/overview](https://onlinelibrary.wiley.com/doi/full/10.1111/add.16154)).
 
 ## Pipeline
 
 This repository contains the main statistical analysis script:
 
 - **[CannTeen_Analysis.R](CannTeen_Analysis.R)** — R script that merges clinical, questionnaire, and drug-condition data and runs the main statistical analyses (linear mixed-effects models, pairwise/permutation tests, correlations).
-
-The upstream imaging preprocessing steps (MRS voxel segmentation in MATLAB and a voxel-position/density check in Python) are maintained locally and are not published here.
-
-## Environment
-
-`CannTeen_Analysis.R` requires R with the packages listed at the top of the file (e.g. `lmerTest`, `emmeans`, `ptestr`).
-
-A conda environment file supporting the local (unpublished) Python voxel-position/density check step is kept locally but is not required to run `CannTeen_Analysis.R` and is not published here.
 
 ## Data
 
@@ -23,4 +15,3 @@ Raw and participant-level data are not included in this repository and must be s
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-
