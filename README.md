@@ -6,7 +6,7 @@ Analysis pipeline for an investigation of MRS (magnetic resonance spectroscopy) 
 
 This repository contains the main statistical analysis script:
 
-- **[CannTeen_Analysis.R](CannTeen_Analysis.R)** — R script that merges clinical, questionnaire, and drug-condition data, cleans and QC-filters MRS sessions, then fits linear mixed-effects models of Glx by condition and age group with permutation-based significance and partial R² (plus post-hoc pairwise comparisons and estimated marginal means). It also runs permutation/bootstrap correlation analyses between Glx shifts and THC/CBD absorption, and generates the accompanying plots.
+- **[CannTeen_Analysis.R](CannTeen_Analysis.R)** — R script that merges clinical, questionnaire, and drug-condition data, cleans and QC-filters MRS sessions, then fits linear mixed-effects models of Glx by condition and age group with permutation-based significance and partial R² (plus post-hoc pairwise comparisons and estimated marginal means). It also runs correlation analyses between Glx shifts and THC/CBD absorption, and generates the accompanying plots.
 
 ## Data
 
