@@ -3,3 +3,7 @@
 .Rproj.user/
 __pycache__/
 *.pyc
+
+# Imaging preprocessing scripts kept local only (not published)
+1_MRS_Segmentation.m
+2_MRS_Voxel_Position_Check.py
